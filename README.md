@@ -1,7 +1,5 @@
 # Module 10 Challenge: Crypto Clustering
 
-![Decorative image.](Images/10-5-challenge-image.png)
-
 ## Background
 
 In this Challenge, you’ll assume the role of an advisor at one of the top five financial advisory firms in the world. Competitors are fierce, so you want to propose a novel approach to assembling investment portfolios that are based on cryptocurrencies. Instead of basing your proposal on only returns and volatility, you want to include other factors that might impact the crypto market&mdash;leading to better performance for your portfolio.
@@ -37,6 +35,8 @@ Use the starter code file to complete the tasks outlined in the Instructions. Th
 
 > **Note:** For the purpose of this assignment, assume that k refers to lowercase k. The instructions will specify "uppercase K" where necessary.
 
+![Market Data](Pictures/Market_Data.png)
+
 ### Find the Best Value for k Using the Original Data
 
 In this section, you will use the elbow method to find the best value for k.
@@ -44,6 +44,7 @@ In this section, you will use the elbow method to find the best value for k.
 1. Code the elbow method algorithm to find the best value for k. Use a range from 1 to 11.
 
 2. Plot a line chart with all the inertia values computed with the different values of k to visually identify the optimal value for k.
+![Elbow Curve](Pictures/Elbow_Curve.png)
 
 3. Answer the following question: What is the best value for k?
 
@@ -60,6 +61,7 @@ In this section, you will use the K-means algorithm with the best value for k (f
 4. Create a copy of the original data and add a new column with the predicted clusters.
 
 5. Using hvPlot, create a scatter plot by setting `x="price_change_percentage_24h"` and `y="price_change_percentage_7d"`. Color the graph points with the labels found using K-means. Then, add the crypto name in the `hover_cols` parameter to identify the cryptocurrency represented by each data point.
+![Scatter Plot Kmeans](Pictures/KMeans_Clusters_4.png)
 
 ### Optimize Clusters with Principal Component Analysis
 
@@ -82,6 +84,7 @@ In this section, you will use the elbow method to find the best value for k by u
 1. Code the elbow method algorithm and use the PCA data to find the best value for k. Use a range from 1 to 11.
 
 2. Plot a line chart with all the inertia values computed with the different values of k to visually identify the optimal value for k.
+![Elbow Curve PCA](Pictures/Elbow_Curve_using_PCA_Data.png)
 
 3. Answer the following questions: What is the best value for k when using the PCA data? Does it differ from the best k value found using the original data?
 
@@ -98,14 +101,17 @@ In this section, you will use the PCA data and the K-means algorithm with the be
 4. Create a copy of the DataFrame with the PCA data and add a new column to store the predicted clusters.
 
 5. Using hvPlot, create a scatter plot by setting `x="PC1"` and `y="PC2"`. Color the graph points with the labels found using K-means. Then, add the crypto name in the `hover_cols` parameter to identify the cryptocurrency represented by each data point.
+![PCA Scatter Plot](Pictures/PCA_Scatter_Plot_by_Cluster_4.png)
 
 ### Visualize and Compare the Results
 
 In this section, you will visually analyze the cluster analysis results by observing the outcome with and without using the optimization techniques.
 
 1. Create a composite plot using hvPlot and the plus (`+`) operator to compare the elbow curve that you created to find the best value for k with the original data and the PCA data.
+![Combined Curves](Pictures/ELbow%20_Curves_together.png)
 
 2. Create a composite plot using hvPlot and the plus (`+`) operator to compare the cryptocurrencies clusters using the original data and the PCA data.
+![Scatter PLot combined](Pictures/Cluster_scatter_plots.png)
 
 3. Answer the following question: After visually analyzing the cluster analysis results, what is the impact of using fewer features to cluster the data by using K-means?
 
@@ -217,10 +223,9 @@ In this section, you will visually analyze the cluster analysis results by obser
 
 To submit your Challenge assignment, click Submit, and then provide the URL of your GitHub repository for grading.
 
-> **Note** You are allowed to miss up to two Challenge assignments and still earn your certificate. If you complete all Challenge assignments, your lowest two grades will be dropped. If you wish to skip this assignment, click Submit, and then indicate you are skipping by typing “I choose to skip this assignment” in the text box.
-
-Comments are disabled for graded submissions in BootCamp Spot. If you have questions about your feedback, please notify your instructional staff or your Student Success Manager. If you would like to resubmit your work for an improved grade, you can use the Resubmit Assignment button to upload new links. You may resubmit up to three times for a total of four submissions.
 
 ---
-
+README originally created by edX Boot Camps LLC
 Copyright 2022 2U. All Rights Reserved.
+
+README edited by J.Woods with plots created from jupyter notebook (crypto_investments)
