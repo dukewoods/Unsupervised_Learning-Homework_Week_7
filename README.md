@@ -1,7 +1,5 @@
 # Module 10 Challenge: Crypto Clustering
 
-![Decorative image.](Images/10-5-challenge-image.png)
-
 ## Background
 
 In this Challenge, you’ll assume the role of an advisor at one of the top five financial advisory firms in the world. Competitors are fierce, so you want to propose a novel approach to assembling investment portfolios that are based on cryptocurrencies. Instead of basing your proposal on only returns and volatility, you want to include other factors that might impact the crypto market&mdash;leading to better performance for your portfolio.
@@ -20,7 +18,7 @@ The CSV file that’s provided for this Homework contains the price change data 
 
 Download the following files to help you get started:
 
-[Module 10 Challenge files](Starter_Code)
+![Module 10 Challenge files](Starter_Code/crypto_investments)
 
 ## Instructions
 
@@ -36,6 +34,7 @@ Use the starter code file to complete the tasks outlined in the Instructions. Th
 * Visualize and Compare the Results
 
 > **Note:** For the purpose of this assignment, assume that k refers to lowercase k. The instructions will specify "uppercase K" where necessary.
+![Plot](Pictures/Market_Data)
 
 ### Find the Best Value for k Using the Original Data
 
@@ -44,8 +43,9 @@ In this section, you will use the elbow method to find the best value for k.
 1. Code the elbow method algorithm to find the best value for k. Use a range from 1 to 11.
 
 2. Plot a line chart with all the inertia values computed with the different values of k to visually identify the optimal value for k.
+![Plot](Pictures/Elbow_Curve)
 
-3. Answer the following question: What is the best value for k?
+4. Answer the following question: What is the best value for k?
 
 ### Cluster Cryptocurrencies with K-means Using the Original Data
 
@@ -60,6 +60,7 @@ In this section, you will use the K-means algorithm with the best value for k (f
 4. Create a copy of the original data and add a new column with the predicted clusters.
 
 5. Using hvPlot, create a scatter plot by setting `x="price_change_percentage_24h"` and `y="price_change_percentage_7d"`. Color the graph points with the labels found using K-means. Then, add the crypto name in the `hover_cols` parameter to identify the cryptocurrency represented by each data point.
+![Plot](Pictures/KMeans_Clusters_4)
 
 ### Optimize Clusters with Principal Component Analysis
 
@@ -82,6 +83,7 @@ In this section, you will use the elbow method to find the best value for k by u
 1. Code the elbow method algorithm and use the PCA data to find the best value for k. Use a range from 1 to 11.
 
 2. Plot a line chart with all the inertia values computed with the different values of k to visually identify the optimal value for k.
+![Plot](Pictures/Elbow_Curve_using_PCA_data)
 
 3. Answer the following questions: What is the best value for k when using the PCA data? Does it differ from the best k value found using the original data?
 
@@ -98,14 +100,17 @@ In this section, you will use the PCA data and the K-means algorithm with the be
 4. Create a copy of the DataFrame with the PCA data and add a new column to store the predicted clusters.
 
 5. Using hvPlot, create a scatter plot by setting `x="PC1"` and `y="PC2"`. Color the graph points with the labels found using K-means. Then, add the crypto name in the `hover_cols` parameter to identify the cryptocurrency represented by each data point.
+![Plot](Pictures/PCA_Scatter_Plot_by_Cluster_4)
 
 ### Visualize and Compare the Results
 
 In this section, you will visually analyze the cluster analysis results by observing the outcome with and without using the optimization techniques.
 
 1. Create a composite plot using hvPlot and the plus (`+`) operator to compare the elbow curve that you created to find the best value for k with the original data and the PCA data.
+![Plot](ELbow_Curves_together)
 
 2. Create a composite plot using hvPlot and the plus (`+`) operator to compare the cryptocurrencies clusters using the original data and the PCA data.
+![Plot](Cluster_scatter_plots)
 
 3. Answer the following question: After visually analyzing the cluster analysis results, what is the impact of using fewer features to cluster the data by using K-means?
 
